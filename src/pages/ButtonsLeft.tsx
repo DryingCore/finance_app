@@ -20,19 +20,32 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function ButtonsLeft() {
     return (
         <Box sx={{ flexGrow: 1, padding: 0, height: '50%', width: '20%' }}>
-            <Grid sx={{ justifyContent: 'start', alignItems: 'center' }}>
-                <Grid sx={{ marginBottom: '20px' }}>
+            <Grid justifyContent="end">
+                <Grid marginBottom="20px" rowSpacing={2}>
                     <BalanceCard />
                 </Grid>
+
                 <Grid>
                     <Item>
                         <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
-                        Your Transactions
+                        <span>Your transactions</span>
                     </Item>
-                    <Item>Last updates</Item>
-                    <Item>Add new transaction</Item>
-                    <Item>Remove transaction</Item>
-                    <Item>Edit transaction</Item>
+                    <Item>
+                        <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
+                        <span>Last updates</span>
+                    </Item>
+                    <Item>
+                        <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
+                        <span>Add new transaction</span>
+                    </Item>
+                    <Item>
+                        <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
+                        <span>Remove transaction</span>
+                    </Item>
+                    <Item>
+                        <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
+                        <span>Edit transaction</span>
+                    </Item>
                 </Grid>
             </Grid>
         </Box>
