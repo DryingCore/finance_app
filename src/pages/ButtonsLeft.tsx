@@ -25,7 +25,7 @@ export default function ButtonsLeft() {
                     <BalanceCard />
                 </Grid>
 
-                <Grid>
+                <Grid rowSpacing={3}>
                     <Item>
                         <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
                         <span>Your transactions</span>
