@@ -16,10 +16,18 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function MainInterface() {
     return (
-        <Box sx={{ flexGrow: 1, padding: 2 }}>
-            <Grid container spacing={2} sx={{ justifyContent: 'end', alignItems: 'center', width: '100%' }}>
+        <Box sx={{ flexGrow: 1, padding: 0, backgroundColor: 'red', height: '50%', width: '60%' }}>
+            <Grid sx={{ justifyContent: 'end', alignItems: 'center', width: '100%' }}>
                 <Grid xs={12} md={8}>
+                    <Item>teste 1</Item>
                     <Item>teste 2</Item>
+                    <Item>teste 3</Item>
+                    <Item>teste 4</Item>
+                    <Item>teste 5</Item>
+                    <Item>teste 6</Item>
+                    <Item>teste 7</Item>
+                    <Item>teste 8</Item>
+                    <Item>teste 9</Item>
                 </Grid>
             </Grid>
         </Box>
