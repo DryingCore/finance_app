@@ -26,7 +26,7 @@ export default function ButtonsLeft() {
                 </Grid>
                 <Grid xs={12} md={4} >
                     <Item>
-                        <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' />
+                        <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
                         Your Transactions
                     </Item>
                     <Item>Last updates</Item>

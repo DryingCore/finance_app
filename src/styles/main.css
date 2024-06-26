@@ -554,24 +554,16 @@ video {
   --tw-contain-style:  ;
 }
 
-.ml-\[5px\] {
-  margin-left: 5px;
-}
-
-.mr-\[5px\] {
-  margin-right: 5px;
-}
-
-.mr-\[px\] {
-  margin-right: px;
-}
-
 .mr-\[10px\] {
   margin-right: 10px;
 }
 
 .flex {
   display: flex;
+}
+
+.w-\[20px\] {
+  width: 20px;
 }
 
 .border {
