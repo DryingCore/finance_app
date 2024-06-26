@@ -1,10 +1,10 @@
-import ContentLeft from "./ContentLeft"
-import MainInterface from "./MainInterface"
+import ButtonsLeft from "./ButtonsLeft.tsx"
+import MainInterface from "./MainInterface.tsx"
 
 function Dashboard() {
     return (
         <>
-            <ContentLeft />
+            <ButtonsLeft />
             <MainInterface />
         </>
     )

@@ -14,7 +14,7 @@ const Item = styled(Paper)(({ theme }) => ({
     borderRadius: theme.shape.borderRadius,
 }));
 
-function ContentLeft() {
+export default function ButtonsLeft() {
     return (
         <Box sx={{ flexGrow: 1, padding: 2 }}>
             <Grid container spacing={2}>
@@ -29,5 +29,3 @@ function ContentLeft() {
         </Box>
     );
 }
-
-export default ContentLeft
