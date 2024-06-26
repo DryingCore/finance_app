@@ -14,6 +14,14 @@ export default function MainInterface() {
                 <Grid xs={12}>
                     <TransactionCard />
                 </Grid>
+
+                <Grid xs={12}>
+                    <TransactionCard />
+                </Grid>
+
+                <Grid xs={12}>
+                    <TransactionCard />
+                </Grid>
             </Grid>
         </Box>
     );

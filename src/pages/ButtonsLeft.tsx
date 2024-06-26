@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Unstable_Grid2'; // Or '@mui/material/Grid' if using stable Grid
 import BalanceCard from './BalanceCard';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -20,28 +20,35 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function ButtonsLeft() {
     return (
         <Box sx={{ flexGrow: 1, padding: 0, height: '50%', width: '20%' }}>
-            <Grid justifyContent="end">
-                <Grid marginBottom="20px" rowSpacing={2}>
+            <Grid container rowSpacing={2}>
+                <Grid xs={12}>
                     <BalanceCard />
                 </Grid>
-
-                <Grid>
+                <Grid xs={12}>
                     <Item>
                         <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
                         <span>Your transactions</span>
                     </Item>
+                </Grid>
+                <Grid xs={12}>
                     <Item>
                         <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
                         <span>Last updates</span>
                     </Item>
+                </Grid>
+                <Grid xs={12}>
                     <Item>
                         <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
                         <span>Add new transaction</span>
                     </Item>
+                </Grid>
+                <Grid xs={12}>
                     <Item>
                         <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
                         <span>Remove transaction</span>
                     </Item>
+                </Grid>
+                <Grid xs={12}>
                     <Item>
                         <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
                         <span>Edit transaction</span>
