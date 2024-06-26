@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
 import BalanceCard from './BalanceCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.background.paper,
@@ -23,7 +24,10 @@ export default function ButtonsLeft() {
                     <BalanceCard />
                 </Grid>
                 <Grid xs={12} md={4} >
-                    <Item>Your Transactions</Item>
+                    <Item>
+                        <FontAwesomeIcon icon={'coffee'}/>
+                            Your Transactions
+                    </Item>
                     <Item>Last updates</Item>
                     <Item>Add new transaction</Item>
                     <Item>Remove transaction</Item>
