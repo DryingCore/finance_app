@@ -19,12 +19,12 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function ButtonsLeft() {
     return (
-        <Box sx={{ flexGrow: 1, padding: 0, height: '50%', width: '40%' }}>
+        <Box sx={{ flexGrow: 1, padding: 0, height: '50%', width: '20%' }}>
             <Grid sx={{ justifyContent: 'start', alignItems: 'center' }}>
                 <Grid sx={{ marginBottom: '20px' }}>
                     <BalanceCard />
                 </Grid>
-                <Grid xs={12} md={4} >
+                <Grid>
                     <Item>
                         <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
                         Your Transactions
