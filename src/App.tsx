@@ -6,6 +6,7 @@ import './styles/main.css'
 function App() {
   return (
     <Container sx={{ backgroundColor: 'black', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <ButtonsLeft />
       <MainInterface />
     </Container >
   )
