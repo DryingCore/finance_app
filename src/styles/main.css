@@ -554,46 +554,24 @@ video {
   --tw-contain-style:  ;
 }
 
-.container {
-  width: 100%;
+.ml-\[5px\] {
+  margin-left: 5px;
 }
 
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
+.mr-\[5px\] {
+  margin-right: 5px;
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
+.mr-\[px\] {
+  margin-right: px;
 }
 
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
+.mr-\[10px\] {
+  margin-right: 10px;
 }
 
 .flex {
   display: flex;
-}
-
-.grid {
-  display: grid;
 }
 
 .border {
