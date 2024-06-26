@@ -19,9 +19,9 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function ButtonsLeft() {
     return (
-        <Box sx={{ flexGrow: 1, padding: 0 }}>
+        <Box sx={{ flexGrow: 1, padding: 0, height: '50%', width: '40%' }}>
             <Grid sx={{ justifyContent: 'start', alignItems: 'center' }}>
-                <Grid sx={{ marginBottom: 2 }}>
+                <Grid sx={{ marginBottom: '20px' }}>
                     <BalanceCard />
                 </Grid>
                 <Grid xs={12} md={4} >
