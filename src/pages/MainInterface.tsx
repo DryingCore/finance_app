@@ -17,7 +17,7 @@ const Item = styled(Paper)(({ theme }) => ({
 function MainInterface() {
     return (
         <Box sx={{ flexGrow: 1, padding: 2 }}>
-            <Grid container spacing={2} sx={{ justifyContent: 'end', alignItems: 'center' }}>
+            <Grid container spacing={2} sx={{ justifyContent: 'end', alignItems: 'center', width: '100%' }}>
                 <Grid xs={12} md={8}>
                     <Item>teste 2</Item>
                 </Grid>
