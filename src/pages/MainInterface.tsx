@@ -1,21 +1,18 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
-import TranscationCard from './Transaction';
+import TransactionCard from './Transaction';
 
 export default function MainInterface() {
     return (
         <Box sx={{ flexGrow: 1, padding: 0, height: '50%', width: '60%', marginLeft: '20px' }}>
-            <Grid sx={{ justifyContent: 'end', alignItems: 'center', width: '100%' }} rowSpacing={12}>
+            <Grid container justifyContent="end" alignItems="center" rowSpacing={2} width="100%">
                 <Grid>
-                    <TranscationCard />
+                    <TransactionCard />
                 </Grid>
-
-                <Grid>
-                    <TranscationCard />
+                <Grid xs={12}>
+                    <TransactionCard />
                 </Grid>
             </Grid>
         </Box>
     );
 }
-
-
