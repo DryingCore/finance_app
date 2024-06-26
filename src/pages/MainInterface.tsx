@@ -2,6 +2,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
+import TranscationCard from './Transaction';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.background.paper,
@@ -19,15 +20,7 @@ function MainInterface() {
         <Box sx={{ flexGrow: 1, padding: 0, backgroundColor: 'red', height: '50%', width: '60%' }}>
             <Grid sx={{ justifyContent: 'end', alignItems: 'center', width: '100%' }}>
                 <Grid xs={12} md={8}>
-                    <Item>teste 1</Item>
-                    <Item>teste 2</Item>
-                    <Item>teste 3</Item>
-                    <Item>teste 4</Item>
-                    <Item>teste 5</Item>
-                    <Item>teste 6</Item>
-                    <Item>teste 7</Item>
-                    <Item>teste 8</Item>
-                    <Item>teste 9</Item>
+                    <TranscationCard />
                 </Grid>
             </Grid>
         </Box>

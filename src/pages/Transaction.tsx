@@ -1,6 +1,6 @@
 import { Card, CardContent, Typography } from "@mui/material";
 
-export default function BalanceCard() {
+export default function TranscationCard() {
     return (
         <>
             <Card sx={{ minWidth: 275 }}>
