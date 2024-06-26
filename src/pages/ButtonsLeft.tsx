@@ -2,6 +2,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
+import BalanceCard from './BalanceCard';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.background.paper,
@@ -18,15 +19,15 @@ export default function ButtonsLeft() {
     return (
         <Box sx={{ flexGrow: 1, padding: 0, backgroundColor: 'purple' }}>
             <Grid sx={{ justifyContent: 'start', alignItems: 'center' }}>
-                <Grid>
-                    
+                <Grid sx={{ marginBottom: 2 }}>
+                    <BalanceCard />
                 </Grid>
                 <Grid xs={12} md={4} >
-                    <Item>Suas Financas</Item>
-                    <Item>Ultimas atualizacoes</Item>
-                    <Item>Adiocionar</Item>
-                    <Item>Retirar</Item>
-                    <Item>modificar</Item>
+                    <Item>Your Transactions</Item>
+                    <Item>Last updates</Item>
+                    <Item>Add new transaction</Item>
+                    <Item>Remove transaction</Item>
+                    <Item>Edit transaction</Item>
                 </Grid>
             </Grid>
         </Box>
