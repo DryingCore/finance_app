@@ -6,10 +6,14 @@ export default function BalanceCard() {
             <Card sx={{ minWidth: 275 }}>
                 <CardContent>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                        Total Balance
+                        <span>
+                            Total Balance
+                        </span>
                     </Typography>
                     <Typography variant="h5" component="div">
-                        R$1600,00
+                        <span>
+                            R$1600,00
+                        </span>
                     </Typography>
                 </CardContent>
             </Card>
