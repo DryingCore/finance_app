@@ -17,7 +17,11 @@ const Item = styled(Paper)(({ theme }) => ({
     borderRadius: theme.shape.borderRadius,
 }));
 
-export default function ButtonsLeft() {
+interface ButtonsLeftProps {
+    onEdit: () => void;
+}
+
+export default function ButtonsLeft({ onEdit }: ButtonsLeftProps) {
     return (
         <Box sx={{ flexGrow: 1, padding: 0, height: '50%', width: '20%' }}>
             <Grid container rowSpacing={2}>
@@ -49,6 +53,8 @@ export default function ButtonsLeft() {
                     </Item>
                 </Grid>
                 <Grid xs={12}>
+                    <Item onClick={onEdit}>
+                        <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
                     <Item>
                         <FontAwesomeIcon icon={faEdit} className='mr-[10px]' size='lg' />
                         <span>Edit transaction</span>
