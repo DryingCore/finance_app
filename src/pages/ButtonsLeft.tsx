@@ -18,6 +18,8 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function ButtonsLeft() {
+
+    
     return (
         <Box sx={{ flexGrow: 1, padding: 0, height: '50%', width: '20%' }}>
             <Grid container rowSpacing={2}>
