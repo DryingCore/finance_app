@@ -54,8 +54,6 @@ export default function ButtonsLeft({ onEdit }: ButtonsLeftProps) {
                 </Grid>
                 <Grid xs={12}>
                     <Item onClick={onEdit}>
-                        <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
-                    <Item>
                         <FontAwesomeIcon icon={faEdit} className='mr-[10px]' size='lg' />
                         <span>Edit transaction</span>
                     </Item>
