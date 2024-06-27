@@ -1,6 +1,6 @@
 import { Card, CardContent, Typography } from "@mui/material";
 
-export default function TranscationCard() {
+export default function TranscationCard({ value }) {
     return (
         <>
             <Card sx={{ minWidth: 275 }}>
@@ -9,7 +9,7 @@ export default function TranscationCard() {
                         Type: Expense
                     </Typography>
                     <Typography variant="h5" component="div">
-                        Value: R$1600,00
+                        Value: R${value}
                     </Typography>
                 </CardContent>
             </Card>

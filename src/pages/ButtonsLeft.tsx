@@ -17,9 +17,9 @@ const Item = styled(Paper)(({ theme }) => ({
     borderRadius: theme.shape.borderRadius,
 }));
 
-export default function ButtonsLeft() {
+export default function ButtonsLeft({ onEdit }) {
 
-    
+
     return (
         <Box sx={{ flexGrow: 1, padding: 0, height: '50%', width: '20%' }}>
             <Grid container rowSpacing={2}>
