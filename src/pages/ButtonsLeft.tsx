@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2'; // Or '@mui/material/Grid' if using stable Grid
@@ -32,7 +32,7 @@ export default function ButtonsLeft() {
                 </Grid>
                 <Grid xs={12}>
                     <Item>
-                        <FontAwesomeIcon icon={faDollarSign} className='mr-[10px]' size='lg' />
+                        <FontAwesomeIcon icon={faBell} className='mr-[10px]' size='lg' />
                         <span>Last updates</span>
                     </Item>
                 </Grid>
