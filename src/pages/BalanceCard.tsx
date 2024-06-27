@@ -1,3 +1,5 @@
+import { faSackDollar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, CardContent, Typography } from "@mui/material";
 
 export default function BalanceCard() {
@@ -7,6 +9,7 @@ export default function BalanceCard() {
                 <CardContent>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                         <span>
+                            <FontAwesomeIcon icon={faSackDollar} className="mr-[10px]" size="lg" />
                             Total Balance
                         </span>
                     </Typography>
