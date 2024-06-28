@@ -15,7 +15,7 @@ export default function TranscationCard({ value }: TransactionCardProps) {
                 </Typography>
                 <Typography variant="h5" component="div">
                     Value: R${value}
-                    <FontAwesomeIcon icon={faEdit} className="justify-self-end"/>
+                    <FontAwesomeIcon icon={faEdit} size="sm"/>
                 </Typography>
             </CardContent>
         </Card>
