@@ -1,3 +1,5 @@
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, CardContent, Typography } from "@mui/material";
 
 interface TransactionCardProps {
@@ -13,6 +15,7 @@ export default function TranscationCard({ value }: TransactionCardProps) {
                 </Typography>
                 <Typography variant="h5" component="div">
                     Value: R${value}
+                    <FontAwesomeIcon icon={faEdit} className="justify-self-end"/>
                 </Typography>
             </CardContent>
         </Card>
