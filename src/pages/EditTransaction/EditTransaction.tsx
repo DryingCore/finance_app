@@ -6,7 +6,7 @@ export default function EditTransaction() {
                 <CardContent>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                         <span>
-                            Total Balance
+                            Which you want to edit?
                         </span>
                     </Typography>
                     <Typography variant="h5" component="div">
