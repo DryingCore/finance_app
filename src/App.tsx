@@ -21,7 +21,7 @@ function App() {
       <MainInterface value={value} />
       */}
 
-      <h1>hello world</h1>
+      <h1 className='text-white bg-red-500'>hello world</h1>
     </Container>
   );
 }
