@@ -18,10 +18,8 @@ function App() {
 
   return (
     <Container sx={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      {/*
       <ButtonsLeft onEdit={handleEdit} />
       <MainInterface value={value} />
-      */}
       <EditTransaction />
     </Container>
   );
