@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
-import TransactionCard from '../Transaction';
+import TransactionCard from '../TransactionCard';
 import GreetingsCard from './GreetingsCard';
 
 interface MainInterfaceProps {
