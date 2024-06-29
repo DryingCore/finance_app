@@ -17,11 +17,11 @@ export default function MainInterface() {
                 </Grid>
 
                 <Grid xs={12}>
-                    <TransactionCard initialValue={2}/>
+                    <TransactionCard initialValue={2} />
                 </Grid>
 
                 <Grid xs={12}>
-                    <TransactionCard initialValue={3}/>
+                    <TransactionCard initialValue={3} />
                 </Grid>
             </Grid>
         </Box>
