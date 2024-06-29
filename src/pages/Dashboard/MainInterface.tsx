@@ -3,11 +3,8 @@ import Grid from '@mui/material/Unstable_Grid2';
 import TransactionCard from '../TransactionCard';
 import GreetingsCard from './GreetingsCard';
 
-interface MainInterfaceProps {
-    value: number;
-}
+export default function MainInterface() {
 
-export default function MainInterface({ value }: MainInterfaceProps) {
     return (
         <Box sx={{ flexGrow: 1, padding: 0, height: '50%', width: '60%', marginLeft: '20px' }}>
             <Grid container justifyContent="end" alignItems="center" rowSpacing={2.3} width="100%">
@@ -16,7 +13,7 @@ export default function MainInterface({ value }: MainInterfaceProps) {
                 </Grid>
 
                 <Grid xs={12}>
-                    <TransactionCard value={value} />
+                    <TransactionCard value={23} />
                 </Grid>
 
                 <Grid xs={12}>

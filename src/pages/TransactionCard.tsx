@@ -7,6 +7,7 @@ interface TransactionCardProps {
 }
 
 export default function TranscationCard({ value }: TransactionCardProps) {
+
     return (
         <Card sx={{ minWidth: 275 }}>
             <CardContent>
