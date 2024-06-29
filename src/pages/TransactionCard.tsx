@@ -4,14 +4,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, CardContent, Typography, Box } from "@mui/material";
 
 interface TransactionCardProps {
-    value: number;
+    initialValue: number;
 }
 
-export default function TranscationCard({ value }: TransactionCardProps) {
-    const setValue = useState();
+export default function TranscationCard({ initialValue }: TransactionCardProps) {
+    const [value, setValue] = useState(initialValue);
+
     function handleEdit() {
         const newValue = prompt("Enter new value:");
-        
+        if (newValue !== null && !isNaN(parseFloat(newValue))) {
+            setValue(parseFloat(newValue));
+        }
     }
 
     return (
@@ -24,7 +27,7 @@ export default function TranscationCard({ value }: TransactionCardProps) {
                     <Typography variant="h5" component="div">
                         Value: R${value}
                     </Typography>
-                    <FontAwesomeIcon icon={faEdit} size="sm" onClick={handleEdit} />
+                    <FontAwesomeIcon icon={faEdit} size="sm" onClick={handleEdit} style={{ cursor: 'pointer' }} />
                 </Box>
             </CardContent>
         </Card>
