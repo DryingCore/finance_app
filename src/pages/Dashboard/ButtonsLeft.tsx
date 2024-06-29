@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell, faDollarSign, faEdit, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faDollarSign, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2'; // Or '@mui/material/Grid' if using stable Grid
