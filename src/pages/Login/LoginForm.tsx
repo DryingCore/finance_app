@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import { TextField, Button, Box } from '@mui/material';
+import axios from 'axios';
+import { TextField, Button, Box, Alert } from '@mui/material';
 
 interface IFormInput {
     email: string;
@@ -19,16 +20,30 @@ const LoginForm: React.FC = () => {
         resolver: yupResolver(schema),
     });
 
-    const onSubmit: SubmitHandler<IFormInput> = data => {
-        console.log(data);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+    const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+        try {
+            const response = await axios.post('https://your-auth-api-url.com/login', {
+                email: data.email,
+                password: data.password,
+            });
+            // Handle successful authentication here
+            console.log('Login successful:', response.data);
+        } catch (error) {
+            // Handle error
+            setErrorMessage('Invalid email or password');
+            console.error('Login failed:', error);
+        }
     };
 
     return (
         <Box
             component="form"
             onSubmit={handleSubmit(onSubmit)}
-            sx={{ display: 'flex', flexDirection: 'column', width: '300px', margin: '0 auto', gap: '16px', backgroundColor: 'white', padding: '16px', borderRadius: '8px' }}
+            sx={{ display: 'flex', flexDirection: 'column', width: '300px', margin: '0 auto', gap: '16px' }}
         >
+            {errorMessage && <Alert severity="error">{errorMessage}</Alert>}
             <TextField
                 label="Email"
                 {...register('email')}
