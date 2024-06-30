@@ -24,7 +24,7 @@ const LoginForm: React.FC = () => {
 
     const onSubmit: SubmitHandler<IFormInput> = async (data) => {
         try {
-            const response = await axios.post('authapi-production-e35b.up.railway.app/api/users/login', {
+            const response = await axios.post('https://authapi-production-e35b.up.railway.app/api/user/login', {
                 email: data.email,
                 password: data.password,
             });
