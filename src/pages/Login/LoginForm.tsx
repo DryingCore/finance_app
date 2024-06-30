@@ -33,6 +33,16 @@ const LoginForm: React.FC = () => {
             // Reset form and clear errors on successful login
             reset();
             setErrorMessage(null);
+
+            // Aqui é onde você normalmente lidaria com o token de sessão ou JWT
+            const authToken = response.data.token;
+
+            // Armazenar o token em localStorage (exemplo simples)
+            localStorage.setItem('authToken', authToken);
+
+            // Redirecionar o usuário para a página principal, por exemplo
+            // history.push('/dashboard'); // depende de como você gerencia a navegação
+
             // Handle successful authentication here
             console.log('Login successful:', response.data);
         } catch (error) {
