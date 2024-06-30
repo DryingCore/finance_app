@@ -16,24 +16,31 @@ const schema = Yup.object().shape({
 });
 
 const LoginForm: React.FC = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm<IFormInput>({
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<IFormInput>({
         resolver: yupResolver(schema),
     });
 
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
+    const [loading, setLoading] = useState(false);
 
     const onSubmit: SubmitHandler<IFormInput> = async (data) => {
         try {
+            setLoading(true);
             const response = await axios.post('https://authapi-production-e35b.up.railway.app/api/user/login', {
                 email: data.email,
                 password: data.password,
             });
+            // Reset form and clear errors on successful login
+            reset();
+            setErrorMessage(null);
             // Handle successful authentication here
             console.log('Login successful:', response.data);
         } catch (error) {
             // Handle error
             setErrorMessage('Invalid email or password');
             console.error('Login failed:', error);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -57,8 +64,8 @@ const LoginForm: React.FC = () => {
                 error={!!errors.password}
                 helperText={errors.password ? errors.password.message : ''}
             />
-            <Button type="submit" variant="contained" color="primary">
-                Login
+            <Button type="submit" variant="contained" color="primary" disabled={loading}>
+                {loading ? 'Loading...' : 'Login'}
             </Button>
         </Box>
     );
