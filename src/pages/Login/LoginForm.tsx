@@ -41,7 +41,7 @@ const LoginForm: React.FC = () => {
         <Box
             component="form"
             onSubmit={handleSubmit(onSubmit)}
-            sx={{ display: 'flex', flexDirection: 'column', width: '300px', margin: '0 auto', gap: '16px' }}
+            sx={{ display: 'flex', flexDirection: 'column', width: '300px', margin: '0 auto', gap: '16px', backgroundColor: 'white', padding: '16px', borderRadius: '8px' }}
         >
             {errorMessage && <Alert severity="error">{errorMessage}</Alert>}
             <TextField
