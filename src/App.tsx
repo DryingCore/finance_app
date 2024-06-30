@@ -1,16 +1,23 @@
-import { Container } from '@mui/material';
-import ButtonsLeft from './pages/Dashboard/ButtonsLeft.tsx';
-import MainInterface from './pages/Dashboard/MainInterface.tsx';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { AuthProvider, useAuth } from './AuthContext';
+import LoginForm from './pages/Login/LoginForm.tsx'; // Importe o componente LoginForm correto
+import Dashboard from './pages/MainApplication.tsx'; // Importe o componente Dashboard correto
+import PrivateRoute from './PrivateRoute';
 import './styles/main.css';
-import LoginForm from './pages/Login/LoginForm.tsx';
 
-function App() {
+const App: React.FC = () => {
+  const { isAuthenticated } = useAuth();
 
   return (
-    <Container sx={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <LoginForm/>
-    </Container>
+    <AuthProvider>
+      <Router>
+        <Switch>
+          <Route path="/login" component={LoginForm} />
+          <PrivateRoute path="/dashboard" component={Dashboard} />
+          <Redirect to="/login" />
+        </Switch>
+      </Router>
+    </AuthProvider>
   );
-}
-
-export default App;
+};
